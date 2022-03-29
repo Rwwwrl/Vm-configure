@@ -1,0 +1,3 @@
+[submodule "minimal-vim-config"]
+	path = minimal-vim-config
+	url = git@github.com:Rwwwrl/minimal-vim-config.git
