@@ -56,17 +56,19 @@ plugins=(
 cd ~
 mkdir code_folder  # как основная папка где будет находиться проект
 cd ~.config
-mkdir -p systemd/user  # чтобы распологать наши сервисы systemd тут
+mkdir -p systemd/user  # чтобы располагать наши сервисы systemd тут
 ```
 
 ```bash
 # добавить в конец .zshrc
 export TERM='ms-terminal' # если сидишь под WindowsTerminal
 
-export SERVICES="$HOME/.config/systemd/user" # теперь к ней можно обращаться как "cd $SERVICES"
-export CODE_FOLDER="$HOME/code_folder/"
-export EDITOR='/usr/bin/vim'
 export NGINX='/etc/nginx/'
+export SERVICES="$HOME/.config/systemd/user" # теперь к ней можно обращаться как "cd $SERVICES"
+
+export CODE_FOLDER="$HOME/code_folder/"
+
+export EDITOR='/usr/bin/vim'  # нужно чтобы sudoedit врубал именно vim, а не nano
 
 alias code_folder="cd $CODE_FOLDER"
 alias python='python3'
@@ -280,3 +282,6 @@ sudo nginx -t  # проверяем тесты
 
 sudo service nginx start  # стартуем наш сервер
 ```
+
+#### TODO:
+* **SSL** сертификат
