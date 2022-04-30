@@ -16,6 +16,7 @@ yes | sudo apt install build-essential libssl-dev libpq-dev python3-venv python3
 yes | sudo apt install curl  # optional
 yes | sudo apt install mlocate  # optional
 yes | sudo apt install fzf  # optional
+yes | sudo apt install ripgrep  # optional
 
 pip3 install wheel  # в venv
 ```
