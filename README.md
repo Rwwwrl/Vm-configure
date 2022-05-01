@@ -29,13 +29,14 @@ ssh-keygen
 cat /home/<UserName>/.ssh/id_rsa.pub
 ```
 
-4. **[OPTIONAL]** Установка и настройка **vim**
+4. **[OPTIONAL]** Установка и настройка **nvim**
 
 ```bash
-yes | sudo apt install vim
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
+sudo apt install ./nvim-linux64.deb
 ```
 
-[Настройка](https://github.com/Rwwwrl/minimal-vim-config)
+[Настройка](https://github.com/Rwwwrl/Minimal-nvim-config.git)
 
 5. Установка и настройка **zsh**
 
@@ -64,7 +65,7 @@ mkdir -p ~/.config/systemd/user  # чтобы располагать наши с
 ```
 
 ```bash
-vim ~/.zshrc
+nvim ~/.zshrc
 ```
 
 ```bash
@@ -86,7 +87,7 @@ export SERVICES="$HOME/.config/systemd/user" # теперь к ней можно
 
 export CODE_FOLDER="$HOME/code_folder/"
 
-export EDITOR='/usr/bin/vim'  # нужно чтобы sudoedit врубал именно vim, а не nano
+export EDITOR='/usr/bin/nvim'  # нужно чтобы sudoedit врубал именно nvim, а не nano
 
 alias code_folder="cd $CODE_FOLDER"
 alias python='python3'
@@ -227,7 +228,7 @@ python manage.py collectstatic
 **simple_django_gunicorn.service:**
 
 ```bash
-vim $SERVICES/simple_django_gunicorn.service
+nvim $SERVICES/simple_django_gunicorn.service
 ```
 
 ```bash
@@ -252,7 +253,7 @@ WantedBy=multi-user.target
 **simple_django_gunicorn.socket:**
 
 ```bash
-vim $SERVICES/simple_django_gunicorn.socket
+nvim $SERVICES/simple_django_gunicorn.socket
 ```
 
 ```bash
